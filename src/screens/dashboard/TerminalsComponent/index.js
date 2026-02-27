@@ -87,7 +87,7 @@ const TerminalsComponent = ({ eventInfo, onEventChange }) => {
   const renderItem = ({ item }) => (
     <TouchableOpacity
       style={styles.ticketCard}
-      onPress={() => navigation.navigate('StaffDashboard', {
+      onPress={() => navigation.navigate('AdminTerminalDashboard', {
         eventInfo: eventInfo,
         staffUuid: item.uuid,
         staffName: item.name,
@@ -108,10 +108,10 @@ const TerminalsComponent = ({ eventInfo, onEventChange }) => {
         </View>
 
         {/* Check-Ins Column */}
-        <View style={styles.column}>
+        {/* <View style={styles.column}>
           <Text style={styles.columnHeader}>Check-Ins</Text>
           <Text style={styles.columnData}>{item.checkins}</Text>
-        </View>
+        </View> */}
       </View>
     </TouchableOpacity>
   );
